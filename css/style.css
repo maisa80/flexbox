@@ -1,11 +1,22 @@
-/* Flex container */
+* {
+    box-sizing: border-box;
+}
 
 .container {
     border: 1px solid #333;
     height: 300px;
     width: 30%;
     display: flex; 
-    
+}
+
+section {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #333;
+}
+
+/* Flex container */
+.flexbox-container {
     flex-direction: row; /* row (default) | row-reverse | column | column-reverse; */
     flex-wrap: wrap; /* nowrap (default) | wrap | wrap-reverse; */
     /* short-hand */
@@ -25,10 +36,31 @@
     gap: 10px 10px; /* <row-gap> <column-gap> */
 }
 
-section {
-    /* width: 50px;
-    height: 50px; */
-    border: 1px solid #333;
+
+/* Flexbox-items */
+.flexbox-items {
+    align-items: center;
 }
+
+.box6 {
+    /* The lower the value, the higher priorty it gets */
+    order: -1; /* default is 0 */
+    align-self: flex-end;
+}
+
+.box7 {
+    flex-grow: 1; /* default 0 */
+    flex-shrink: 1; /* default 1 */
+    flex-basis: auto; /* default auto */
+}
+
+.box8 {
+    flex-grow: 10; /* default 0 */
+    flex-shrink: 10; /* default 1 */
+    flex-basis: auto; /* default auto, meaning it inherits its value from width/height */
+    /* short-hand */
+    flex: 10px 10px auto; /* <flex-grow> <flex-shrink> <flex-basis> */ 
+}
+
 
 
